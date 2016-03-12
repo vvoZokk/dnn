@@ -91,8 +91,8 @@
             "tau_ref" : 1.0,
             "delta_catalyst" : 0.00,
             "tau_catalyst" : 5.0,
-            "tau_eligibility" : 75.0,
-            "learning_rate" : 0.1
+            "tau_eligibility" : 25.0,
+            "learning_rate" : 0.15
         },
         "HedonisticSynapse_inh" : {
             "psp_decay" : 10.0,
@@ -100,8 +100,8 @@
             "tau_ref" : 1.0,
             "delta_catalyst" : 0.00,
             "tau_catalyst" : 5.0,
-            "tau_eligibility" : 750.0,
-            "learning_rate" : 0.05
+            "tau_eligibility" : 25.0,
+            "learning_rate" : 0.1
         },
         "StaticSynapse_rec" : {
             "psp_decay" : 10.0,
@@ -160,7 +160,8 @@
     "reinforcements" : {
         "InputClassifier" : {
             "ltp" : 1.0,
-            "ltd" : -1.0
+            "ltd" : -1.0,
+            "ltn" : 0.0
         }
     },
     "weight_normalizations" : {
@@ -220,13 +221,13 @@
             {
                 "size" : 250,
                 "neuron" : "LeakyIntegrateAndFire",
-    						"act_function" : "Determ",
+    			"act_function" : "Determ",
                 "weight_normalization" : "MinMax"
             },
             {
                 "size" : 2,
                 "neuron" : "LeakyIntegrateAndFire",
-    						"act_function" : "Determ",
+    			"act_function" : "Determ",
                 "weight_normalization" : "MinMax",
                 "reinforcement" : "InputClassifier"
             }
@@ -255,7 +256,7 @@
             ]
         },
         "reward_dynamics" : {
-            "tau_trace" : 100.0, 
+            "tau_trace" : 30.0, 
             "tau_mean_trace" : 500.0
         },
         "dt" : 1.0,
