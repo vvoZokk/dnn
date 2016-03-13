@@ -161,7 +161,7 @@
         "InputClassifier" : {
             "ltp" : 1.0,
             "ltd" : -1.0,
-            "ltn" : 0.0
+            "reaction_to_noise" : 0.0
         }
     },
     "weight_normalizations" : {

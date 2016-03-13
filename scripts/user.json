@@ -4,7 +4,7 @@
         "EVAL_TYPE" : "error_rate",
         "T1" : "2000",
         "INSP_MODEL" : "0",
-        "WD" : "/Volumes/MEDIA/DNN/runs",
+        "WD" : "/Volumes/MEDIA/DNN/runs/test-run",
         "TIMED_PATTERN_LENGTH" : "50000",
         "TIMED_PATTERN_LENGTH_TEST" : "10000"
     },
