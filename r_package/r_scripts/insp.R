@@ -355,7 +355,11 @@ if(EVAL) {
           }
         }
 
-        cat(sprintf("%1.10f", error.rate), "\n")
+        if (print.roc) {
+          cat(sprintf("%1.10f", 1 - auc@y.values[[1]]), "\n")
+        } else {
+          cat(sprintf("%1.10f", error.rate), "\n")
+        }
         if(SAVE_PIC_IN_FILES) {
           dev.off()
           write(paste("Eval debug pic filename: ", eval_debug_pic), stderr())
