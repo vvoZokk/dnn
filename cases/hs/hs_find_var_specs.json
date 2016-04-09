@@ -1,0 +1,22 @@
+{
+    "hedonistic_synapse_eligibility" : [
+        ["synapses", "HedonisticSynapse", "tau_eligibility"]
+      , [1.0, 350.0]
+    ],
+    "hedonistic_synapse_refractory" : [
+        ["synapses", "HedonisticSynapse", "tau_ref"]
+      , [1.0, 50.0]
+    ],
+    "hedonistic_synapse_catalyst" : [
+        ["synapses", "HedonisticSynapse", "tau_catalyst"]
+      , [1.0, 350.0]
+    ],
+    "hedonistic_synapse_delta_catalyst" : [
+        ["synapses", "HedonisticSynapse", "delta_catalyst"]
+      , [0.0, 50.0]
+    ],
+    "reward" : [
+    	["sim_configuration", "reward_dynamics", "tau_trace"]
+      , [1.0, 350.0]
+    ]
+}

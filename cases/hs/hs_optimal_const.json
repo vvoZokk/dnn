@@ -38,20 +38,6 @@
             "tau_refr" : 2.0,
             "amp_adapt" : 0.5,
             "tau_adapt" : 100.0
-        },
-        "SRMNeuron_l2" : {
-            "u_rest" : 0.0,
-            "amp_refr" : 100,
-            "tau_refr" : 2.0,
-            "amp_adapt" : 0.5,
-            "tau_adapt" : 500.0
-        },
-        "SRMNeuron_l3" : {
-            "u_rest" : 0.0,
-            "amp_refr" : 100,
-            "tau_refr" : 2.0,
-            "amp_adapt" : 0.5,
-            "tau_adapt" : 1000.0
         }
     },
     "act_functions" : {
@@ -59,12 +45,6 @@
             "threshold" : 0.75
         },
         "ExpThreshold" : {
-            "p_rest" : 0.1,
-            "threshold" : 0.70,
-            "beta" : 10.0,
-            "amp"   : 20.0
-        },
-        "ExpThreshold_l2" : {
             "p_rest" : 0.1,
             "threshold" : 0.70,
             "beta" : 10.0,
@@ -81,39 +61,14 @@
             "psp_decay" : 10.0,
             "amp" : 1.0
         },
-        "StaticSynapse_inh" : {
-            "psp_decay" : 10.0,
-            "amp" : -1.0
-        },
         "HedonisticSynapse" : {
             "psp_decay" : 10.0,
             "amp" : 1.0,
-            "tau_ref" : 1.0,
-            "delta_catalyst" : 0.00,
-            "tau_catalyst" : 5.0,
-            "tau_eligibility" : 25.0,
-            "learning_rate" : 0.15
-        },
-        "HedonisticSynapse_inh" : {
-            "psp_decay" : 10.0,
-            "amp" : -1.0,
-            "tau_ref" : 1.0,
-            "delta_catalyst" : 0.00,
-            "tau_catalyst" : 5.0,
-            "tau_eligibility" : 25.0,
-            "learning_rate" : 0.1
-        },
-        "StaticSynapse_rec" : {
-            "psp_decay" : 10.0,
-            "amp" : 1.0
-        },
-        "StaticSynapse_l2" : {
-            "psp_decay" : 10.0,
-            "amp" : 1.0
-        },
-        "StaticSynapse_inh_l2" : {
-            "psp_decay" : 10.0,
-            "amp" : -1.0
+            "tau_ref" : 12.419,
+            "delta_catalyst" : 38.519,
+            "tau_catalyst" : 204.782,
+            "tau_eligibility" : 137.471,
+            "learning_rate" : 0.10
         },
         "STDSynapse" : {
             "psp_decay" : 2.0,
@@ -144,15 +99,6 @@
             "target_rate" : 5.0,
             "target_rate_factor" : 0.0,
             "weight_decay" : 0.0,
-            "tau_hebb" : 0.0,
-            "learning_rate" : "globals/learning_rate"
-        },
-        "OptimalStdp_l2" : {
-            "tau_c" : 100.0,
-            "tau_mean" : 60000.0,
-            "target_rate" : 5.0,
-            "target_rate_factor" : 0.0,
-            "weight_decay" : 0.1,
             "tau_hebb" : 0.0,
             "learning_rate" : "globals/learning_rate"
         }
@@ -199,9 +145,6 @@
        },
         "Stochastic_inh" : {
             "prob" : 0.25
-       },
-        "Stochastic_rec" : {
-            "prob" : 0.1
        },
        "DifferenceOfGaussians" : {
            "a" : 1.0,
@@ -253,7 +196,7 @@
             ]
         },
         "reward_dynamics" : {
-            "tau_trace" : 15.0,
+            "tau_trace" : 111.958,
             "tau_mean_trace" : 500.0
         },
         "dt" : 1.0,
@@ -271,11 +214,5 @@
     "network_configuration" : {
         "input" : "@net-input",
         "output" : "@net-output"
-    },
-    "prepare_data" : {
-        "dt" : 5.0,
-        "neurons" : 100,
-        "dst_file" : "spike_input.pb",
-        "prolongation" : 240000
     }
 }
