@@ -266,7 +266,7 @@ if(EVAL) {
         }
         chop.spikes = chop.spikes.list(spikes)
         errors = c()
-        classes = c()
+        auc.vec = c()
         errors.count = 0
         probability.list = list()
         
@@ -350,13 +350,14 @@ if(EVAL) {
                 auc = performance(prediction(c(1 - probability.list[[n]][, n], probability.list[[m]][, m]),
                                              c(rep(labels.vec[n], tmp.n), rep(labels.vec[m], tmp.m))), "auc")
                 legend("bottomright", bty = "n", sprintf("AUC = %.3f  ", auc@y.values), lty = 0)
+                auc.vec = c(auc.vec, auc@y.values[[1]])
               }
             }
           }
         }
 
         if (print.roc) {
-          cat(sprintf("%1.10f", 1 - auc@y.values[[1]]), "\n")
+          cat(sprintf("%1.10f", 0.25 * error.rate + 0.75 * (1 - mean(auc.vec))), "\n")
         } else {
           cat(sprintf("%1.10f", error.rate), "\n")
         }

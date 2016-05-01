@@ -1,0 +1,14 @@
+{
+    "hedonistic_synapse_eligibility" : [
+        ["synapses", "HedonisticSynapse", "tau_eligibility"]
+      , [1.0, 350.0]
+    ],
+    "reward" : [
+    	["sim_configuration", "reward_dynamics", "tau_trace"]
+      , [1.0, 350.0]
+    ],
+    "reward_mean" : [
+    	["sim_configuration", "reward_dynamics", "tau_mean_trace"]
+      , [350.0, 1500.0]
+    ]
+}

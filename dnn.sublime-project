@@ -2,16 +2,13 @@
 	"folders":
 	[
 		{
+			"path": "cases"
+		},
+		{
 			"path": "dnn_project"
 		},
 		{
-			"path": "r_package/Rdnn/src"
-		},
-		{
-			"path": "r_package/Rdnn/R"
-		},
-		{
-			"path": "r_package/r_scripts"
+			"path": "r_package"
 		},
 		{
 			"path": "scripts"
