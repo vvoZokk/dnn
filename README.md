@@ -1,4 +1,6 @@
-﻿# DNN lib and tools
+# Classic version of DNN lib and tools
+It's old unsupported version, see actual DNN [here](https://github.com/alexeyche/dnn)
+
 Library of Dynamic Neural Networks for time series related tasks
 Main library consist of multithreaded simulator of recurrent spiking (impulse) neural networks dynamics written in C++. It contains variety components which can be connected with each other in different combinations
 ## Neurons
@@ -22,6 +24,8 @@ Mock neuron for input spike sequences from files
 static synapse, can be described by simple exponential decay 
 ####STDSynapse
 synapse with short-term memory ([Tsodyks et al](https://scholar.google.ru/scholar?hl=ru&q=tsodyks+markram+1997&btnG=))
+####Hedonistic synapse
+Hedonistic synapse alters its activity depending on the intrinsic activity and on the reinforcement ([H. S. Seung](http://dx.doi.org/10.1016/S0896-6273(03)00761-X))
 ## Activation functions:
 ####Determ
 Determinate threshold, neuron is firing if membrane reached threshold
